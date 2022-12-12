@@ -77,7 +77,7 @@ at line 102 in `vendor\inertiajs\inertia-laravel\src\Response.php`
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
-### Configure tailwind
+#### Configure tailwind
 Replace the content in `tailwind.config.js` with
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -92,7 +92,7 @@ module.exports = {
 }
 ```
 and create the file `resources/js/theme.js` with content `module.exports = {}`
-### Add base directories
+#### Add base directories
 Replace `resources/css/app.css` content with
 ```css
 @tailwind base;
