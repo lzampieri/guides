@@ -4,6 +4,7 @@
 
 - Add `'mix_url' => env('MIX_ASSET_URL', null),` after     `'asset_url' => env('ASSET_URL', null),` in `config/app.php`
 - Add `APP_URL`, `ASSETS_URL`, `MIX_ASSET_URL` in `.env`
+- Add `.setResourceRoot( process.env.MIX_ASSET_URL )` just after first call to `mix` in `webpack.mix.js`
 - Add
     ```html
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
@@ -24,6 +25,9 @@
 ### Manage db tables
 - Add `DB_TABLES_PREFIX='...'` in `.env`
 - Set `'prefix' => env('DB_TABLES_PREFIX', ''),` in `config/database.php` in the `mysql` section (around row 50)
+
+### Remove useless packages
+- Execute `composer remove laravel/sanctum`
 
 ### Manage protocol
 - Add `\URL::forceScheme('https');` in `app\Providers\AppServiceProvider.php` inside the `boot()` method
