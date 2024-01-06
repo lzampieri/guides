@@ -2,7 +2,7 @@
 
 ### Install laravel
 ```
-composer create-project laravel/laravel alumnisgss_members_portal "8.*"
+composer create-project laravel/laravel WEBSITE_TITLE "8.*"
 ```
 
 ### Update laravel
