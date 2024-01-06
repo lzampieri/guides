@@ -10,7 +10,8 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
     ```
-    in each view, 
+    in each view
+(if using inertia, an example of the `php` is reported in `InstallLaravelAndInertia.md`)
 
 ### Manage versioning and notification
 - Add, in the end of `webpack.mix.js`:

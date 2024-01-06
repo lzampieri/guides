@@ -13,7 +13,7 @@ module.exports = {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
-    theme: require('theme'),
+    theme: require('./resources/js/theme.js'),
     plugins: [],
 }
 ```
