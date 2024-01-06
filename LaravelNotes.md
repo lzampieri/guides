@@ -30,6 +30,13 @@
 ### Remove useless packages
 - Execute `composer remove laravel/sanctum`
 
+### Redirect to public
+Create a file called `index.php` in the root of the project and add the following content:
+```
+<?php
+header('Location: public/');
+```
+
 ### Manage protocol
 - Add `\URL::forceScheme('https');` in `app\Providers\AppServiceProvider.php` inside the `boot()` method
 - Create the file `App\Http\Middleware\ForceHttps.php` with the code:
