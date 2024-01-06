@@ -64,3 +64,24 @@ class ForceHttps
 }
 ```
 and add the row `\App\Http\Middleware\ForceHttps::class` in the `$middleware` array in `App\Http\Kernel.php`
+
+### Send all request to public folder
+In the main folder of Laravel app, add an `.htaccess` file and write:
+```
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+```
+
+### Manage environment
+Install `custom-env`:
+```
+npm install custom-env
+```
+and add, on the top of `webpack.mix.js`
+```
+require('custom-env').env()
+```
+
+This way, you can use a `.env` file for local deployment and a `.env.production` file which is automatically used in production environment
+

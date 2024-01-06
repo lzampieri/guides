@@ -35,7 +35,7 @@ php artisan inertia:middleware
 ```
 and add `\App\Http\Middleware\HandleInertiaRequests::class` as last element in 'web' array in `App\Http\Kernel.php`
 
-Rename the main view as `app.blade.js`
+Rename the main view as `app.blade.php`
 
 ### Setup app.js
 Replace the content in `resouces/js/app.js` with:
@@ -70,32 +70,3 @@ with
 'url' => $request->getRequestUri(),
 ```
 at line 102 in `vendor\inertiajs\inertia-laravel\src\Response.php`
-
-### For installing tailwind
-#### Install tailwind
-```shell
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-#### Configure tailwind
-Replace the content in `tailwind.config.js` with
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./resources/**/*.vue",
-    ],
-    theme: require('theme'),
-    plugins: [],
-}
-```
-and create the file `resources/js/theme.js` with content `module.exports = {}`
-#### Add base directories
-Replace `resources/css/app.css` content with
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
